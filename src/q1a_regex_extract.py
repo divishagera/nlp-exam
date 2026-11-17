@@ -1,6 +1,5 @@
 # 1a: Write a program to extract email, data, phone number from text files using
-# Python regular expression? (Note: "data" in the syllabus sheet corresponds to
-# date extraction.)
+# Python regular expression?
 
 import re
 

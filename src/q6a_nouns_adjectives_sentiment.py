@@ -1,4 +1,6 @@
-# 6a: Identify Nouns and Adjectives & Sentiment Score Using Chunking
+# 6a: Write a program identify nouns and adjectives from the given sentence and
+# calculates the overall sentiment score of the extracted adjectives using
+# Chunking in natural language processing (NLP)
 
 import nltk
 from textblob import TextBlob

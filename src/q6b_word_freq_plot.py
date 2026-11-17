@@ -1,4 +1,5 @@
-# 6b: Plot Graph of Most Frequent Words Without Stop Words and Punctuation
+# 6b: Write a Program to plot the graph with the most frequently distributed
+# word without stop words and punctuation in the given text.
 
 import nltk
 import matplotlib.pyplot as plt

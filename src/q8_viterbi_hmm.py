@@ -1,4 +1,6 @@
-# 8: Viterbi Algorithm Using HMM for POS Tagging
+# 8: Write the program to implement the Viterbi algorithm using a hidden Markov
+# model(HMM) to determine the most probable POS tags for the given sentence
+# "free workers"
 
 import nltk
 

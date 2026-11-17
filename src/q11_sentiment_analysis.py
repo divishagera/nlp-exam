@@ -1,4 +1,5 @@
-# 11: Sentiment Analysis Case Study (vaccination_tweets.csv)
+# 11: Write a program to conduct the case study on sentiment analysis using
+# Natural language processing. Use a vaccination_tweets .csv data set
 
 import re
 import warnings

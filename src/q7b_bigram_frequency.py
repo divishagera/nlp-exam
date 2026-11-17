@@ -1,4 +1,6 @@
-# 7b: Bigram Frequency Across 3 Documents
+# 7b: Create a collection of 3 documents. Write a program to find the frequency
+# of bi-grams in this collection. Find the number of bi-grams that occur and
+# display the top 5 most common.
 
 from collections import Counter
 import nltk

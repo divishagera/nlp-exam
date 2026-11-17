@@ -1,10 +1,11 @@
 # 5a: Write a Python program to validate a password based on the following
 # security requirements. The program should accept a password from the user and
-# check whether it satisfies all the given criteria: The password must contain
-# at least 8 characters. It must contain at least one uppercase letter (A-Z). It
-# must contain at least one lowercase letter (a-z). It must contain at least one
-# digit (0-9). It must contain at least one special character (e.g., @, #, $, %,
-# &, ).
+# check whether it satisfies all the given criteria:
+# - The password must contain at least 8 characters.
+# - It must contain at least one uppercase letter (A-Z).
+# - It must contain at least one lowercase letter (a-z).
+# - It must contain at least one digit (0-9).
+# - It must contain at least one special character (e.g., @, #, $, %, &, *).
 
 import re
 

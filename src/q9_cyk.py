@@ -1,4 +1,5 @@
-# 9: Cocke-Younger-Kasami (CYK) Algorithm
+# 9: Write a program to decide whether a given string belongs to the language of
+# grammar or not using Cocke-Younger-Kasami Algorithm.
 
 def cyk_parse(words, grammar):
     n = len(words)

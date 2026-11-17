@@ -1,8 +1,9 @@
 # 2a: Write a Python program to create a list with n values. The list of
 # integers with exactly two occurrences of nineteen and at least three
 # occurrences of five. Return True Otherwise False.
-# Sample inputs/outputs: [19, 19, 15, 5, 3, 5, 5, 2] -> True; [19, 15, 15, 5, 3,
-# 3, 5, 2] -> False; [19, 19, 5, 5, 5, 5, 5] -> True.
+# Sample: Input: [19, 19, 15, 5, 3, 5, 5, 2] Output: True
+# Input: [19, 15, 15, 5, 3, 3, 5, 2] Output: False
+# Input: [19, 19, 5, 5, 5, 5, 5] Output: True
 
 nums = []
 n = int(input("enter the size (list): "))

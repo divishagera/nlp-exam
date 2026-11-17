@@ -1,4 +1,5 @@
-# 12: SMS Spam Detection Case Study (spam.csv)
+# 12: Write a program to conduct the case study on SMS Spam Detection Analysis
+# using Natural language processing. Use an spam.csv data set
 
 import pandas as pd
 from sklearn.model_selection import train_test_split

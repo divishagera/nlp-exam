@@ -1,4 +1,8 @@
-# 10: Minimum Edit Distance (Dynamic Programming)
+# 10: Write a program to implement the minimum edit distance for converting
+# source string to the target string following the dynamic programming approach
+# given the cost of insertion as 1, cost of deletion as 1 and cost of substation
+# as 1.
+# Input: i) A source string ii) A target string
 
 def min_edit_distance(source, target, ins_cost=1, del_cost=1, sub_cost=1):
     m = len(source)

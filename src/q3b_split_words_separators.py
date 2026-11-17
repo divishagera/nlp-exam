@@ -1,6 +1,8 @@
 # 3b: Write a Python program to split a string of words separated by commas and
 # spaces into two lists, words and separators.
-# Sample input: "The colors in my studyroom are blue, green, and yellow."
+# Input: The colors in my studyroom are blue, green, and yellow.
+# Output: [['The', 'colors', 'in', 'my', 'studyroom', 'are', 'blue', 'green',
+# 'and', 'yellow.'], [' ', ' ', ' ', ' ', ' ', ' ', ', ', ', ', ' ']]
 
 import re
 

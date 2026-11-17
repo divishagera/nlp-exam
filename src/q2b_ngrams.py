@@ -1,5 +1,5 @@
 # 2b: Write a program to implement N-Gram Model from the given text, excluding
-# the stop words.
+# the stop words
 
 import nltk
 from nltk.corpus import stopwords

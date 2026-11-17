@@ -1,4 +1,5 @@
-# 7a: Morphological Analysis and POS-Based Lemmatization
+# 7a: Write a program to demonstrate Morphological Analysis and Perform
+# Lemmatization based on the Parts of Speech on the given text.
 
 import nltk
 from nltk.tokenize import word_tokenize
