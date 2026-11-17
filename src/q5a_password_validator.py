@@ -10,24 +10,23 @@ import re
 
 
 def validate_password(password):
-  errors = []
   if len(password) < 8:
-    errors.append("must contain at least 8 characters")
-  if not re.search(r"[A-Z]", password):
-    errors.append("must contain at least one uppercase letter (A-Z)")
+    return False, "Password must be at least 8 char long"
+  if re.search(r"\s", password):
+    return False, "Password mustn't contain spaces"
   if not re.search(r"[a-z]", password):
-    errors.append("must contain at least one lowercase letter (a-z)")
+    return False, "Password must contain at least one lowercase"
+  if not re.search(r"[A-Z]", password):
+    return False, "Password must contain at least one uppercase"
   if not re.search(r"\d", password):
-    errors.append("must contain at least one digit (0-9)")
-  if not re.search(r"[@#$%&*!^()_+\-=\[\]{};':\"\|,.<>/?]", password):
-    errors.append("must contain at least one special character")
-
-  if not errors:
-    return True, "Valid password: satisfies all security requirements."
-  return False, "Invalid password: " + "; ".join(errors) + "."
+    return False, "Password must contain at least one no."
+  if not re.search(r"[@#$%&*(),.?\":{}|<>]", password):
+    return False, "Password must contain at least one special character"
+  return True, "Password is valid and secure"
 
 
 if __name__ == "__main__":
-  password = input("Enter a password to validate: ")
-  is_valid, message = validate_password(password)
-  print(message)
+  test_passwords = ["weak!", "Password1!", "StrongPass123@"]
+  for password in test_passwords:
+    valid, message = validate_password(password)
+    print(f"{password} : {message}")

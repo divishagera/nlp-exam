@@ -4,17 +4,23 @@
 # Sample inputs/outputs: [19, 19, 15, 5, 3, 5, 5, 2] -> True; [19, 15, 15, 5, 3,
 # 3, 5, 2] -> False; [19, 19, 5, 5, 5, 5, 5] -> True.
 
-def check_list_condition(nums):
+nums = []
+n = int(input("enter the size (list): "))
+
+for i in range(0, n):
+  print("enter number at index ", i)
+  item = int(input())
+  nums.append(item)
+
+print("user list is nums", nums)
+
+
+def test(nums):
   return nums.count(19) == 2 and nums.count(5) >= 3
 
 
-if __name__ == "__main__":
-  n = int(input("Enter the number of elements (n): "))
-  nums = []
+print("original list")
+print(nums)
 
-  for i in range(n):
-    val = int(input(f"Enter integer at index {i}: "))
-    nums.append(val)
-
-  print("User list:", nums)
-  print("Output:", check_list_condition(nums))
+result = test(nums)
+print("test result:", result)
