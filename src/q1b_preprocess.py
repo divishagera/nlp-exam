@@ -4,21 +4,28 @@
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
-from nltk.tokenize import word_tokenize
 
 nltk.download("punkt", quiet=True)
 nltk.download("punkt_tab", quiet=True)
 nltk.download("stopwords", quiet=True)
 
-text = input("Enter text to preprocess: ")
+example_string = input("Enter text to preprocess: ").strip()
+if not example_string:
+    example_string = "There is a man on the hill, and I watched him. He has a telescope. I am on a hill and I saw a man using my telescope. I am on a hill and I saw a man with a telescope."
 
-tokens = word_tokenize(text.lower())
-stop_words = set(stopwords.words("english"))
-filtered = [w for w in tokens if w.isalnum() and w not in stop_words]
+sentences = nltk.sent_tokenize(example_string)
+print(sentences)
+
+words = nltk.word_tokenize(example_string)
+print(words)
 
 stemmer = PorterStemmer()
-stemmed = [stemmer.stem(w) for w in filtered]
+stop_words = set(stopwords.words("english"))
 
-print("Tokens:", tokens)
-print("After Stop Word Removal:", filtered)
-print("After Stemming:", stemmed)
+for i in range(len(sentences)):
+    sent_words = nltk.word_tokenize(sentences[i])
+    sent_words = [stemmer.stem(word) for word in sent_words if word.lower() not in stop_words]
+    sentences[i] = " ".join(sent_words)
+
+print(sent_words)
+print(sentences)

@@ -8,16 +8,14 @@ nums = []
 n = int(input("enter the size (list): "))
 
 for i in range(0, n):
-  print("enter number at index ", i)
-  item = int(input())
-  nums.append(item)
+    print("enter number at index ", i)
+    item = int(input())
+    nums.append(item)
 
 print("user list is nums", nums)
 
-
 def test(nums):
-  return nums.count(19) == 2 and nums.count(5) >= 3
-
+    return nums.count(19) == 2 and nums.count(5) >= 3
 
 print("original list")
 print(nums)

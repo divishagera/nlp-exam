@@ -10,14 +10,15 @@ nltk.download("punkt_tab", quiet=True)
 nltk.download("averaged_perceptron_tagger", quiet=True)
 nltk.download("averaged_perceptron_tagger_eng", quiet=True)
 
-text = input("Enter a sentence: ")
-pos_tags = nltk.pos_tag(word_tokenize(text))
+sentence = input("Enter a sentence for POS tagging and parsing: ").strip()
+if not sentence:
+    sentence = "The clever student solved the hard problem."
 
+pos_tags = nltk.pos_tag(word_tokenize(sentence))
 print("POS Tags:", pos_tags)
 
 grammar = "NP: {<DT>?<JJ>*<NN.*>+}"
 tree = RegexpParser(grammar).parse(pos_tags)
-
 print("Parsed Tree:")
 print(tree)
-# tree.draw()  # Uncomment to open the Tkinter tree window on a desktop display
+# tree.draw()  # Uncomment to open graphical tree window on desktop

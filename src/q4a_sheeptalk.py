@@ -3,22 +3,12 @@
 
 import re
 
-
 def is_sheeptalk(string):
-  # ^ start, ba fixed state, min & max req, $ end
-  pattern = r"^ba{2,3}!$"
-  return bool(re.match(pattern, string))
+    # ^ start, ba fixed state, min & max req, $ end
+    pattern = r"^ba{2,3}!$"
+    return bool(re.match(pattern, string))
 
-
-test_strings = [
-    "baa!",
-    "baaa!",
-    "ba!",
-    "baa!!",
-    "baa!!",
-    "b!",
-    "baaaa!",
-]
+test_strings = ["baa!", "baaa!", "ba!", "baa!!", "baa!!", "b!", "baaaa!"]
 
 for s in test_strings:
-  print(f"'{s}' : {is_sheeptalk(s)}")
+    print(f"'{s}' : {is_sheeptalk(s)}")

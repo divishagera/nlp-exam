@@ -4,13 +4,11 @@
 
 import re
 
-
 def split_words(text):
-  tokens = re.split(r"([ ,]+)", text)
-  words = tokens[0::2]
-  separators = tokens[1::2]
-  return words, separators
-
+    tokens = re.split(r"([ ,]+)", text)
+    words = tokens[0::2]
+    separators = tokens[1::2]
+    return words, separators
 
 text = "me, you, him, her, they, so"
 words, separators = split_words(text)
